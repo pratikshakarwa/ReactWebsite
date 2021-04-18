@@ -1,12 +1,37 @@
 import React, { useContext } from "react"
 import styled from "styled-components"
-import logo from "../images/logo.svg"
+import logo from "../images/logo-Atyeti.webp"
 import { GoThreeBars } from "react-icons/go"
 import { Link } from "gatsby"
 import NavLink from "./NavLink"
 
 const Navbar = () => {
-  return <h2>navbar component</h2>
+  return (
+     <Wrapper>
+<div className="nav-center">
+  <div className="nav-header">
+<Link to="/">
+  <img src={logo} alt="atyeti" style={{marginTop:"3rem"}}></img>
+  </Link>
+   <button className="toggle-btn">
+    <GoThreeBars/>
+  </button>
+
+  </div>
+<ul className="nav-links">
+  <li>
+    <button>Service</button>
+    </li>
+    <li>
+    <button>Solutions</button>
+    </li>
+    </ul>
+
+  </div>
+
+
+  </Wrapper>
+  )
 }
 
 const Wrapper = styled.nav`

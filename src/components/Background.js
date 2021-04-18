@@ -3,13 +3,38 @@ import BackgroundImage from "gatsby-background-image"
 import styled, { keyframes } from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Background = () => {
-  return <h2>background image component</h2>
+const query = graphql`
+  {
+    file(relativePath: {eq: "Atyeti_Home.jpg"}) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+const Background = ({children}) => {
+  const {
+    file:{childImageSharp: { fluid },
+  },
+} = useStaticQuery(query)
+
+  return ( 
+  <Wrapper>
+   
+ <BackgroundImage Tag="div" fluid={fluid} className="bcg" preserveStackingContext={true}>
+{children}
+    </BackgroundImage>
+    <div>
+    <h3 style={{ margin: "2rem 0 3rem 0",textAlign:"center"}}>EXCEEDING EXPECTATIONS WITH THESE KEY OFFERINGS</h3></div>
+  </Wrapper>
+  )
 }
 
 const fadeIn = keyframes`
       from{
-         background-color:rgb(0,0,0,0.8);
+         background-color:rgb(225,225,225,0.4);
       }
       to{
         background-color:rgba(0,0,0,0.4);

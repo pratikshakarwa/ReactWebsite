@@ -1,37 +1,30 @@
 import React from "react"
 import {
-  GiCompass,
-  GiDiamondHard,
+ GiBank,
+ GiHealthNormal,
   GiStabbedNote,
-  GiBriefcase,
 } from "react-icons/gi"
 export default [
   {
     id: 1,
-    icon: <GiCompass className="icon" />,
-    label: "mission",
+    icon: <GiBank className="icon" />,
+    label: "Banking & Financial Services",
     text:
-      " Activated charcoal post-ironic unicorn flexitarian tumeric, direct trade man bun mumblecore kickstarter art party. ",
+      " Investment Banking & Brokerage continues to be transformed by technological innovations including those in the areas of cloud, mobility and big data. While these innovations present opportunities, capital market  organizations are also faced.",
   },
   {
     id: 2,
-    icon: <GiDiamondHard className="icon" />,
-    label: "vision",
+    icon: <GiHealthNormal className="icon" />,
+    label: "Health & Life Sciences",
     text:
-      " Brooklyn mustache polaroid neutra. Wolf subway tile gluten-free bushwick, godard letterpress pitchfork direct trade put a bird on",
+      " Healthcare and life sciences organizations face complex challenges to evolve their systems and processes to meet both regulatory and patient care demands. Increasing costs and limited budgets add to the complexity.",
   },
   {
     id: 3,
     icon: <GiStabbedNote className="icon" />,
-    label: "history",
+    label: "Media & Entertainment",
     text:
-      "Chia pinterest locavore letterpress tote bag. Subway tile PBR&B knausgaard locavore quinoa four loko disrupt photo booth hella.",
+      "Internet of Things, digital convergence, and on-demand mobility are creating new opportunities for media companies. To meet the demands of a 24/7 connected world, you need a nimble partner with their finger on the pulse of new technology.",
   },
-  {
-    id: 4,
-    icon: <GiBriefcase className="icon" />,
-    label: "work",
-    text:
-      "Man braid banh mi prism disrupt hella cray mlkshk jean shorts typewriter synth salvia direct trade pabst knausgaard.",
-  },
+  
 ]
