@@ -4,27 +4,38 @@ import logo from "../images/logo-Atyeti.webp"
 import { GoThreeBars } from "react-icons/go"
 import { Link } from "gatsby"
 import NavLink from "./NavLink"
-
+import{GatsbyContext} from '../context/context'
 const Navbar = () => {
-  return (
+const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext)
+ const tempLinks = [...new Set(links.map(links=>{
+   return links.page
+ })
+ ),
+]
+
+return (
      <Wrapper>
 <div className="nav-center">
   <div className="nav-header">
 <Link to="/">
-  <img src={logo} alt="atyeti" style={{marginTop:"3rem"}}></img>
+  <img src={logo} alt="atyeti" style={{marginTop:"3rem",height:"85px",width:"195px"}}></img>
   </Link>
-   <button className="toggle-btn">
+  {!isSidebarOpen &&(
+
+
+ <button className="toggle-btn" onClick={showSidebar}>
     <GoThreeBars/>
   </button>
+  )}
+  
 
   </div>
 <ul className="nav-links">
-  <li>
-    <button>Service</button>
-    </li>
-    <li>
-    <button>Solutions</button>
-    </li>
+ {tempLinks.map((page,index) =>
+ {
+   return <NavLink key={index} page={page}/>
+ }
+ )}
     </ul>
 
   </div>
@@ -42,6 +53,7 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   .nav-center {
+    padding-top:3rem;
     width: 90vw;
     margin: 0 auto;
     max-width: var(--max-width);
@@ -94,7 +106,7 @@ const Wrapper = styled.nav`
       max-width: 500px;
     }
     li {
-      padding: 1rem 0;
+      padding: 1rem 3rem;
       position: relative;
     }
     button {
@@ -103,8 +115,8 @@ const Wrapper = styled.nav`
       border: transparent;
       font-size: 1rem;
       letter-spacing: 2px;
-      font-weight: 500;
-      padding: 10px 20px;
+      font-weight: 1000;
+      padding: 10px 30px;
       width: 100%;
       text-transform: capitalize;
       position: relative;

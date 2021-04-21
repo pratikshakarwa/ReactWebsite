@@ -2,57 +2,76 @@ import React from "react"
 import { FaCcStripe, FaCreditCard, FaAlipay } from "react-icons/fa"
 export default [
   {
-    page: "products",
-    label: "payments",
-    url: `/products/payments`,
+    page: "solutions",
+    label: "BANK & FINANCE",
+    url: `/solutions/BankAndFinance`,
     icon: <FaCreditCard className="icon" />,
   },
   {
-    page: "products",
-    label: "terminal",
-    url: `/products/payments`,
+    page: "solutions",
+    label: "HEALTH & LIFE SCIENCES",
+    url: `/solutions/HelthAndLife`,
     icon: <FaCreditCard className="icon" />,
   },
   {
-    page: "products",
-    label: "connect",
-    url: `/products/payments`,
+    page: "solutions",
+    label: "Media & Entertainment",
+    url: `/solutions/MediaAndEnter`,
     icon: <FaCreditCard className="icon" />,
   },
   {
-    page: "products",
-    label: "billing",
-    url: `/products/payments`,
+    page: "service",
+    label: "Application service",
+    url: `/service/Application`,
     icon: <FaCreditCard className="icon" />,
   },
   {
-    page: "developers",
-    label: "documentation",
-    url: `/products/payments`,
+    page: "service",
+    label: "Bigdata & Analytics",
+    url: `/service/BigAndAna`,
     icon: <FaAlipay className="icon" />,
   },
   {
-    page: "developers",
-    label: "libraries",
-    url: `/products/payments`,
+    page: "service",
+    label: "Cloud Service",
+    url: `/service/Cloud`,
     icon: <FaAlipay className="icon" />,
   },
   {
-    page: "developers",
-    label: "plugins",
-    url: `/products/payments`,
+    page: "service",
+    label: "Infrastructure",
+    url: `/service/Infrastructure`,
     icon: <FaAlipay className="icon" />,
   },
   {
-    page: "company",
-    label: "jobs",
-    url: `/products/payments`,
+    page: "service",
+    label: "Mobility",
+    url: `/service/Mobility`,
     icon: <FaCcStripe className="icon" />,
   },
   {
-    page: "company",
-    label: "customers",
-    url: `/products/payments`,
+    page: "service",
+    label: "RRAAS",
+    url: `/service/RRAAS`,
     icon: <FaCcStripe className="icon" />,
   },
+
+{
+ page: "service",
+label: "SoftwareAsset",
+url: `/service/SoftwareAsset`,
+icon: <FaCcStripe className="icon"/>
+
+},
+ 
+
+{
+ page: "service",
+label: "Staffing Solution",
+url: `/service/Staffing`,
+icon: <FaCcStripe className="icon"/>
+
+},
+
+
 ]

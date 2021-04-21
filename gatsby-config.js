@@ -25,18 +25,37 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-webfonts`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: {
-          google: [
+        fonts: [
+         
             {
-              family: "Roboto",
-              variants: ["400", "700"],
+              family: `Roboto`,
+              variants: [`400`, `500`,`700`],
             },
-            { family: "Open Sans" },
-          ],
+            { 
+              family: `Open Sans`,
+             },
+             {
+              family:`Caveat`,
+             },
+            ],
+          },
         },
+{
+  resolve:`gatsby-source-airtable`,
+  options:{
+    apiKey:process.env.GATSBY_AIRTABLE_API,
+    concurrency:5,
+    tables:[
+      {
+        baseId:process.env.GATSBY_AIRTABLE_BASE_ID,
+        tableName:`Projects`,
+        mapping:{image:`fileNode`},
       },
-    },
-  ],
+    ],
+   },
+   
+  },
+],
 }

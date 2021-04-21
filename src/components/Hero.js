@@ -2,16 +2,44 @@ import React from "react"
 import Background from "./Background"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi"
-const Hero = () => {
+import { FiChevronLeft, FiChevronsRight } from "react-icons/fi"
+
+const Hero = ({ projects }) => {
+  const images = projects.map((item) =>{
+  const {data:{
+    image: { localFiles },
+  },
+} = item
+  const image = localFiles[0].childImageSharp.fluid
+  return image
+  })
+const [index, setIndex] = React.useState(0)
+
   return (
   <Wrapper>
-  <Background>
+  <Background image={images[index]}>
     <article>
 <h3>COVID-19</h3>
 <h1>We are in this to together</h1>
 <Link to="/">Learn More</Link>
 </article>
+<button className="prev-btn" onClick={() => setIndex(index-1)}>
+  <FiChevronLeft />
+</button>
+<button className="next-btn" onClick={() => setIndex(index+1)}>
+  <FiChevronsRight />
+</button>
+<div className="dots">
+  {
+    images.map((_,btnIndex) =>{
+return ( <span key={btnIndex}
+  onClick={()=> setIndex(btnIndex)}
+className={index === btnIndex ? "active" : undefined}>
+
+</span>
+     )
+      })}
+</div>
   </Background>
 </Wrapper>
   )

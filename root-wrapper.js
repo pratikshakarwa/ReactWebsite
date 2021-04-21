@@ -1,6 +1,6 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
-//provider
+import{GatsbyProvider} from './src/context/context'
 
 const GlobalStyle =createGlobalStyle`
 
@@ -150,6 +150,7 @@ p {
   cursor: pointer;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
+  margin-bottom:30px;
 }
 .btn:hover {
   background: var(--clr-primary-7);
@@ -176,10 +177,11 @@ p {
 
 `
 export const wrapRootElement =({element}) =>{
-    return<>
-    <GlobalStyle/>
-        {element}
+    return(<>
+    <GlobalStyle />
+        <GatsbyProvider>{element}</GatsbyProvider>
+      
     
     
-    </>
+    </>)
 }
