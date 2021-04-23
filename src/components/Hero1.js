@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 import { FiChevronLeft, FiChevronsRight } from "react-icons/fi"
 
-const Hero = ({ projects }) => {
+const Hero1 = ({ projects }) => {
   const images = projects.map((item) =>{
   const {data:{
     image: { localFiles },
@@ -18,17 +18,13 @@ const [index, setIndex] = React.useState(0)
   return (
   <Wrapper>
   <Background image={images[index]}>
-    <article>
-<h3>COVID-19</h3>
-<h1>We are in this to together</h1>
-<Link to="/">Learn More</Link>
-</article>
-<button className="prev-btn" onClick={() => setIndex(index-1)}>
+    
+{/* <button className="prev-btn" onClick={() => setIndex(index-1)}>
   <FiChevronLeft />
 </button>
 <button className="next-btn" onClick={() => setIndex(index+1)}>
   <FiChevronsRight />
-</button>
+  </button> */}
 
 <div className="dots">
   {
@@ -155,4 +151,4 @@ const Wrapper = styled.section`
   }
 `
 
-export default Hero
+export default Hero1

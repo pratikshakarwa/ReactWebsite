@@ -6,4 +6,6 @@ import Survey from "./Survey"
 import Slider from "./Slider"
 import Algolia from "./Algolia"
 import GridProjects from "./GridProjects"
-export { Layout, Hero, About, Projects, Survey, Slider, Algolia, GridProjects }
+import Wallpaper from "./Wallpaper"
+import Hero1 from "./Hero1"
+export { Layout, Hero, About, Projects, Survey, Slider, Algolia, GridProjects,Wallpaper ,Hero1}

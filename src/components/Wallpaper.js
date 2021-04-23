@@ -5,12 +5,12 @@ import styled from "styled-components"
 import Image from "gatsby-image"
 import SearchButtons from "./SearchButtons"
 
-const Projects = ({ projects: data,title,page }) => {
+const Wallpaper = ({ projects: data,title,page }) => {
   const [projects,setProjects] = React.useState(data)
   
   //more logic
   return (<Wrapper className="section">
-    <Title title={ title || "service"} />
+    {/* <Title title={ title || "service"} /> */}
    
     <div className="section-center">
   {projects.map(item =>{
@@ -35,13 +35,7 @@ return (
 
 })}
 
-</div>{
-  !page &&
-  <Link to="/projects" className="btn">
-Our Services
-</Link>
- 
-}
+</div>
  
   </Wrapper>
   )
@@ -64,7 +58,7 @@ const Wrapper = styled.section`
     /* safari workaround */
     grid-gap: 2rem;
     .img {
-      height: 20rem;
+      height: 30rem;
       border-radius: var(--radius);
       transition: var(--transition);
     }
@@ -130,4 +124,4 @@ const Wrapper = styled.section`
     margin-top: 3rem;
   }
 `
-export default Projects
+export default Wallpaper

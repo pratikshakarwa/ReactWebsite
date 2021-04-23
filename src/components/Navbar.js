@@ -31,11 +31,18 @@ return (
 
   </div>
 <ul className="nav-links">
+  
  {tempLinks.map((page,index) =>
  {
    return <NavLink key={index} page={page}/>
  }
  )}
+ <li>
+    <Link to="/company" className="btn">Company</Link>
+   
+    
+    </li>
+    <li> <Link to="/wall" className="btn">Contact</Link></li>
     </ul>
 
   </div>
@@ -52,9 +59,10 @@ const Wrapper = styled.nav`
   height: 5rem;
   display: flex;
   align-items: center;
+  
   .nav-center {
-    padding-top:3rem;
-    width: 90vw;
+    padding-top:5rem;
+    width: 100vw;
     margin: 0 auto;
     max-width: var(--max-width);
   }
@@ -104,11 +112,24 @@ const Wrapper = styled.nav`
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       max-width: 500px;
+      
     }
     li {
       padding: 1rem 3rem;
       position: relative;
     }
+    .btn {
+   color: var(--clr-white);
+      background: transparent;
+      border: transparent;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      font-weight: 1000;
+      padding: 10px 30px;
+      width: 100%;
+      text-transform: capitalize;
+      position: relative;
+}
     button {
       color: var(--clr-white);
       background: transparent;

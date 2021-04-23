@@ -6,9 +6,80 @@ import Image from "gatsby-image"
 import { FaQuoteRight } from "react-icons/fa"
 import { FiChevronRight, FiChevronLeft } from "react-icons/fi"
 
+
+ const query = graphql`
+  {
+    allAirtable(filter: {table: {eq: "Customers"}}) {
+      nodes {
+        data {
+          Name
+          quotes
+          title
+          image {
+            localFiles {
+              childImageSharp {
+                fixed(width:150,height:150){
+                 ...GatsbyImageSharpFixed
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 const Slider = () => {
-  return <h2>slider component</h2>
-}
+  const {allAirtable:{nodes:customers}} = useStaticQuery(query);
+  const [index,setIndex] =React.useState(0);//to get particular slide
+//to set the index again to 0
+React.useEffect(() =>{
+  const lastIndex = customers.length -1;
+  if(index < 0){
+    setIndex(lastIndex)
+  }
+  if(index > lastIndex){
+    setIndex(0)
+  }
+} , [index , customers] )
+  return ( <Wrapper className="section">
+    <Title title="company" />
+    <div className="section-center">{
+     customers.map((customer,customerIndex) =>{
+       const{
+         data:{image,Name,title,quotes}} = customer
+      const customerImg = image.localFiles[0].childImageSharp.fixed;
+     
+     let position ='nextSlide'
+     if(customerIndex === index){
+       position="activeSlide"
+     }
+
+      //for correct navigation and 2nd condition to check original array
+      if(customerIndex === index-1 || (index === 0 && customerIndex === customers.length -1)){
+        position ="lastSlide"
+      }
+
+    return <article className={position} key={customerIndex}>
+      <Image fixed={customerImg} className="img"></Image>
+      <h4>{Name}</h4>
+      <p className="title">{title}</p>
+      <p className="text">{quotes}</p>
+      <FaQuoteRight className="icon"/>
+
+    </article>  
+    })
+
+    }
+    <button className="prev" onClick={() => setIndex(index-1)}>
+      <FiChevronLeft />
+    </button>
+    <button className="next" onClick={() => setIndex(index + 1)}>
+      <FiChevronRight />
+    </button>
+    </div></Wrapper>
+  )}
+
 
 const Wrapper = styled.div`
   background: var(--clr-grey-10);
@@ -86,7 +157,7 @@ const Wrapper = styled.div`
       left: 0;
       width: 100%;
       height: 100%;
-      opacity: 0;
+      opacity: 0; 
       transition: var(--transition);
     }
     article.activeSlide {

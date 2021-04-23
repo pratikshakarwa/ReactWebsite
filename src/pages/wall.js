@@ -2,24 +2,21 @@ import React from "react"
 import { graphql } from "gatsby"
 import {
   Layout,
-  Hero,
+  Hero1,
   About,
   Projects,
   Survey,
-  Slider,
   GridProjects,
+  Wallpaper,
 } from "../components"
 import SEO from "../components/seo"
-const HomePage = ({ data }) => {
+const Wall = ({ data }) => {
   const { 
     allAirtable: { nodes: projects },
 } = data
   return (
     <Layout>
-      <Hero projects={projects}/>
-      <About/>
-      <Projects projects={projects} title="services" />
-     
+      <Hero1 projects={projects}/>
     </Layout>
   )
 }
@@ -27,13 +24,12 @@ const HomePage = ({ data }) => {
 
 export const query = graphql`
   {
-    allAirtable(filter: {table: {eq: "Projects"}}, limit: 3, sort: {fields: data___date, order: ASC}) {
+    allAirtable(filter: {table: {eq: "Projects"}}, limit: 3, sort: {fields: data___date, order: DESC}) {
       nodes {
         id
         data {
-          Name
+        
           date
-          type
           image {
             localFiles {
               childImageSharp {
@@ -49,4 +45,4 @@ export const query = graphql`
   }
 `
 
-export default HomePage
+export default Wall
