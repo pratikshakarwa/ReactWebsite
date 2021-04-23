@@ -6,7 +6,7 @@ import {
   About,
   Projects,
   Survey,
-  Slider,
+  
   GridProjects,
 } from "../components"
 import SEO from "../components/seo"

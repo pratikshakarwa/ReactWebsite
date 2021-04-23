@@ -17,6 +17,7 @@ const [index, setIndex] = React.useState(0)
 
   return (
   <Wrapper>
+    
   <Background image={images[index]}>
     
 {/* <button className="prev-btn" onClick={() => setIndex(index-1)}>

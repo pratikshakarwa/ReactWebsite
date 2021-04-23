@@ -36,13 +36,7 @@ return (
  {
    return <NavLink key={index} page={page}/>
  }
- )}
- <li>
-    <Link to="/company" className="btn">Company</Link>
-   
-    
-    </li>
-    <li> <Link to="/wall" className="btn">Contact</Link></li>
+ )}  <li> <Link to="/wall" className="btn">Contact</Link></li>
     </ul>
 
   </div>

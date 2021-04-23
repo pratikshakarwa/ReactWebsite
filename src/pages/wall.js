@@ -3,13 +3,15 @@ import { graphql } from "gatsby"
 import {
   Layout,
   Hero1,
-  About,
+  About1,
   Projects,
   Survey,
   GridProjects,
   Wallpaper,
+  About,
 } from "../components"
 import SEO from "../components/seo"
+import Company from "./company"
 const Wall = ({ data }) => {
   const { 
     allAirtable: { nodes: projects },
@@ -17,6 +19,8 @@ const Wall = ({ data }) => {
   return (
     <Layout>
       <Hero1 projects={projects}/>
+      <About1/>
+      
     </Layout>
   )
 }

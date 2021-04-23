@@ -8,4 +8,5 @@ import Algolia from "./Algolia"
 import GridProjects from "./GridProjects"
 import Wallpaper from "./Wallpaper"
 import Hero1 from "./Hero1"
-export { Layout, Hero, About, Projects, Survey, Slider, Algolia, GridProjects,Wallpaper ,Hero1}
+import About1 from "./About1"
+export { Layout, Hero, About, Projects, Survey, Slider, Algolia, GridProjects,Wallpaper ,Hero1,About1}

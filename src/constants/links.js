@@ -6,6 +6,7 @@ export default [
     label: "BANK & FINANCE",
     url: `/solutions/BankAndFinance`,
     icon: <FaCreditCard className="icon" />,
+    
   },
   {
     page: "solutions",

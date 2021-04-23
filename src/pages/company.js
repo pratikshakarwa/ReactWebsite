@@ -1,14 +1,13 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Split, SplitTitle, SplitImg } from '../pages/split'
- import {Layout} from "../components"
+import { Split, SplitTitle, SplitImg } from './split'
  import styled from "styled-components"
-import Logo from "../images/image2.jpeg"
+import Logo from "../images/comapny3.jpg"
 import { Container } from "react-bootstrap"
+import { Layout } from '../components';
 const Company = () => {
     return (
-        <Wrapper>
-        <Layout>
+        
         <Container> 
             
             <Split>
@@ -33,20 +32,13 @@ const Company = () => {
         
         
          </Container>
-           </Layout>
           
-        </Wrapper>
+        
         
         
     )
 }
  
-const Wrapper = styled.main`
-  min-height: 150vh;
-  background: var(--clr-grey-10);
-  nav {
-    background: var(--clr-grey-5);
-  }
 
-`
+
 export default Company
