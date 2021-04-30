@@ -20,7 +20,7 @@ export default [
     url: `/solutions/MediaAndEnter`,
     icon: <FaCreditCard className="icon" />,
   },
- /* {
+  {
     page: "service",
     label: "Application service",
     url: `/service/Application`,
@@ -69,10 +69,11 @@ icon: <FaCcStripe className="icon"/>
 {
  page: "service",
 label: "Staffing Solution",
-url: `/service/Staffing`,
+url: `/service/staffing`,
 icon: <FaCcStripe className="icon"/>
 
-},*/
+},
+
 
 
 ]

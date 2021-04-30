@@ -27,7 +27,7 @@ const Wrapper = styled.main`
 `
 export const query = graphql`
   {
-    allAirtable(filter: {table: {eq: "Projects"}}, limit: 6, sort: {fields: data___date, order: ASC}) {
+    allAirtable(filter: {table: {eq: "Projects"}}, limit: 8, sort: {fields: data___date, order: ASC}) {
       nodes {
         id
         data {
@@ -35,6 +35,7 @@ export const query = graphql`
           date
           type
            description
+              LearnMore
           image {
             localFiles {
               childImageSharp {

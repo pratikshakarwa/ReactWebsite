@@ -75,6 +75,7 @@ body {
 }
 ul {
   list-style-type: none;
+  
 }
 a {
   text-decoration: none;
@@ -105,10 +106,11 @@ h3 {
   font-size: 1.25rem;
 }
 h4 {
+  
   font-size: 0.875rem;
 }
 p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   color: var(--clr-grey-3);
 }
 @media screen and (min-width: 800px) {

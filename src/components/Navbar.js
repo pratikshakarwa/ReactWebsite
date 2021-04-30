@@ -18,11 +18,10 @@ return (
 <div className="nav-center">
   <div className="nav-header">
 <Link to="/">
-  <img src={logo} alt="atyeti" style={{marginTop:"3rem",height:"85px",width:"195px"}}></img>
+  <img src={logo} alt="atyeti" style={{marginTop:"-2rem",height:"65px",width:"170px"}}></img>
   </Link>
+ 
   {!isSidebarOpen &&(
-
-
  <button className="toggle-btn" onClick={showSidebar}>
     <GoThreeBars/>
   </button>
@@ -30,13 +29,16 @@ return (
   
 
   </div>
+ 
 <ul className="nav-links">
-  
+ 
  {tempLinks.map((page,index) =>
  {
    return <NavLink key={index} page={page}/>
  }
  )}  <li> <Link to="/wall" className="btn">Contact</Link></li>
+  <li><Link to="https://careers.smartrecruiters.com/AtyetiInc" className="btn">Career</Link></li>
+  <li> <Link to="/careers" className="btn">Case Studies</Link></li>
     </ul>
 
   </div>
@@ -53,9 +55,9 @@ const Wrapper = styled.nav`
   height: 5rem;
   display: flex;
   align-items: center;
-  
+  -webkit-box-align: center;
   .nav-center {
-    padding-top:5rem;
+    padding-top:4rem;
     width: 100vw;
     margin: 0 auto;
     max-width: var(--max-width);
@@ -64,7 +66,7 @@ const Wrapper = styled.nav`
     color: var(--clr-white);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly ;
     img {
       width: auto;
     }
@@ -98,18 +100,18 @@ const Wrapper = styled.nav`
     .nav-center {
       display: grid;
       grid-template-columns: auto 1fr;
-      gap: 0 2rem;
-      grid-gap: 0 4rem;
+      gap: 0 1rem;
+      grid-gap: 0 1rem;
       align-items: center;
     }
     .nav-links {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       max-width: 500px;
       
     }
     li {
-      padding: 1rem 3rem;
+      padding:0rem 3rem;
       position: relative;
     }
     .btn {
@@ -117,9 +119,9 @@ const Wrapper = styled.nav`
       background: transparent;
       border: transparent;
       font-size: 1rem;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       font-weight: 1000;
-      padding: 10px 30px;
+      padding: 5px 10px;
       width: 100%;
       text-transform: capitalize;
       position: relative;
@@ -129,10 +131,10 @@ const Wrapper = styled.nav`
       background: transparent;
       border: transparent;
       font-size: 1rem;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       font-weight: 1000;
-      padding: 10px 30px;
-      width: 100%;
+      padding: 5px 10px;
+      width: 90%;
       text-transform: capitalize;
       position: relative;
     }

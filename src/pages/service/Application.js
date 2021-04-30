@@ -2,37 +2,37 @@ import React from "react"
 import { Layout } from "../../components"
 import styled from "styled-components"
 import { Link } from "gatsby"
-
-const HealthAndLife = ({props}) => {
+import App from "./App"
+import "./cont1.css"
+import "./Application.css"
+const Application = ({props}) => {
   /*const path= props.location.pathname.slice(1);*/
   return (
+    <div className="cont1">
   <Layout>
     <Wrapper>
-      <div className="section-center">
-        <p>
-      Applications are integral to how companies define and meet their 
-      changing business needs, which will improve ROI and retain customer loyalty
-Atyeti, can help you design, build, test and manage your 
-applications to be competitive in a high-velocity, software-driven world.</p>
-       <h2>Key Service Areas</h2>
-<div>
-    <h3>Architecture Strategy and Design</h3>
-<h3>Application Modernization and Portfolio Management</h3>
-<h3>Application Development and System integration</h3>
-<h3>Application Support and Maintenance</h3>
-<h3>Application Testing Services</h3>
-
-</div>
+     
        
-      </div>
-       <Link to='/'className="btn" >Home</Link>
+      
+      <App />
     </Wrapper>
   </Layout>
+  </div>
   )
 }
 
 const Wrapper = styled.main`
-  margin-top: -5rem;
+  min-height: 150vh;
+  background: var(--clr-grey-10);
+  nav {
+    background: var(--clr-grey-5);
+  }
+
+`
+
+
+
+  /* margin-top: -5rem;
   background: var(--clr-primary-8);
   min-height: calc(100vh - 5rem);
   display: grid;
@@ -85,6 +85,6 @@ const Wrapper = styled.main`
     }
     
   }
-`
+` */
 
-export default HealthAndLife
+export default Application

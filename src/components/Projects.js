@@ -15,7 +15,7 @@ const Projects = ({ projects: data,title,page }) => {
     <div className="section-center">
   {projects.map(item =>{
     const {id} =item;
-    const {description, Name} =item.data
+    const {description, Name,LearnMore} =item.data
     const fluid =item.data.image.localFiles[0].childImageSharp.fluid
 return (
 <article key={id}>
@@ -24,7 +24,7 @@ return (
 <div className="info">
   <p>-{Name}-</p>
   <h5>{description}</h5>
-  
+  <a href={LearnMore}>LearnMore...</a> 
   </div>
   
  </div>
@@ -51,6 +51,9 @@ Our Services
 
 const Wrapper = styled.section`
   background: var(--clr-grey-10);
+  a{
+    text-decoration:none;
+  }
   h5{
     font-size: 0.789rem;
     color:black
@@ -127,7 +130,7 @@ const Wrapper = styled.section`
     width: 9rem;
     text-align: center;
     margin: 0 auto;
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 `
 export default Projects
