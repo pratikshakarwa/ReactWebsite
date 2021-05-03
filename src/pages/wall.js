@@ -20,7 +20,6 @@ const Wall = ({ data }) => {
     <Layout>
       <Hero1 projects={projects}/>
       <About1/>
-      
     </Layout>
   )
 }

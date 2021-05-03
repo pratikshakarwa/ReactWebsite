@@ -30,7 +30,7 @@ return (
 
   </div>
  
-<ul className="nav-links">
+<ul className="nav-links" >
  
  {tempLinks.map((page,index) =>
  {
@@ -39,6 +39,7 @@ return (
  )}  <li> <Link to="/wall" className="btn">Contact</Link></li>
   <li><Link to="https://careers.smartrecruiters.com/AtyetiInc" className="btn">Career</Link></li>
   <li> <Link to="/careers" className="btn">Case Studies</Link></li>
+  <li> <Link to="/partners" className="btn">partners</Link></li>
     </ul>
 
   </div>
@@ -56,6 +57,7 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   -webkit-box-align: center;
+  padding-top:0rem;
   .nav-center {
     padding-top:4rem;
     width: 100vw;
@@ -106,12 +108,12 @@ const Wrapper = styled.nav`
     }
     .nav-links {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(7, 1fr);
       max-width: 500px;
       
     }
     li {
-      padding:0rem 3rem;
+      padding:0rem 2rem;
       position: relative;
     }
     .btn {

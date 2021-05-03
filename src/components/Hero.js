@@ -48,6 +48,7 @@ className={index === btnIndex ? "active" : undefined}>
 
 const Wrapper = styled.section`
   article {
+    
     width: 85vw;
     max-width: 800px;
     color: var(--clr-white);

@@ -30,7 +30,7 @@ applications to be competitive in a high-velocity, software-driven world.
                                                   <div className="row slideanim slide" >
                                                     <div className="col-md-4"  >
                                                           <p className="p">Architecture Strategy and Design</p>
-<p className="p">&bull; Application Modernization and Portfolio Management</p>
+<p className="p">Application Modernization and Portfolio Management</p>
 
 <p className="p">Application Development and System integration</p>
 <p className="p">Application Support and Maintenance</p>

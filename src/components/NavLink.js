@@ -6,7 +6,7 @@ import {GatsbyContext} from '../context/context'
 const NavLink = ({page}) => {
   const {links} =useContext(GatsbyContext);
   return <Wrapper>
-    <button>{page}</button>
+    <button className="btn">{page}</button>
     <div className="links">{links.map((link,index)=>{
       const {url,label,icon} = link
       if(link.page === page){

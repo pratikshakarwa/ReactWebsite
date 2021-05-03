@@ -15,12 +15,15 @@ const HomePage = ({ data }) => {
     allAirtable: { nodes: projects },
 } = data
   return (
+    <>
+    <SEO title="Atyeti" />
     <Layout>
       <Hero projects={projects}/>
       <About/>
       <Projects projects={projects} title="services" />
      
     </Layout>
+    </>
   )
 }
 

@@ -97,7 +97,7 @@ const Wrapper = styled.section`
     border: transparent;
     cursor: pointer;
     transition: var(--transition);
-    @media (min-width: 800px) {
+    @media (min-width: 750px) {
       & {
         font-size: 4.5rem;
       }

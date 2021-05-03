@@ -2,7 +2,8 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Split, SplitTitle, SplitImg } from './case1'
  import styled from "styled-components"
-import Logo from "../images/comapny3.jpg"
+import Logo from "../images/case.jpg"
+import Logo1 from "../images/case1.jpg"
 import { Container } from "react-bootstrap"
 import { Layout } from '../components';
 import Card from 'react-bootstrap/Card'
@@ -16,7 +17,7 @@ const Case = () => {
             <Split>
             
             <div>
-                <SplitImg src={Logo} alt="logo" />
+                <SplitImg src={Logo1} alt="logo" />
             </div>
             <div>
                 <SplitTitle>Case Studies Details</SplitTitle>
@@ -43,9 +44,9 @@ const Case = () => {
       <Card.Footer>
       <small className="text-muted">Completed</small>
     </Card.Footer>
-      <Card.Footer>
+      {/* <Card.Footer>
       <small className="text-muted">Last updated 3 mins ago</small>
-    </Card.Footer>
+    </Card.Footer> */}
   </Card>
   {/* </CardDeck> */}
             </div>
