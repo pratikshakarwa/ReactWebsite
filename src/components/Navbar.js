@@ -4,48 +4,69 @@ import logo from "../images/logo-Atyeti.webp"
 import { GoThreeBars } from "react-icons/go"
 import { Link } from "gatsby"
 import NavLink from "./NavLink"
-import{GatsbyContext} from '../context/context'
+import { GatsbyContext } from "../context/context"
 const Navbar = () => {
-const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext)
- const tempLinks = [...new Set(links.map(links=>{
-   return links.page
- })
- ),
-]
+  const { isSidebarOpen, showSidebar, links } = useContext(GatsbyContext)
+  const tempLinks = [
+    ...new Set(
+      links.map(links => {
+        return links.page
+      })
+    ),
+  ]
 
-return (
-     <Wrapper>
-<div className="nav-center">
-  <div className="nav-header">
-<Link to="/">
-  <img src={logo} alt="atyeti" style={{marginTop:"-2rem",height:"65px",width:"170px"}}></img>
-  </Link>
- 
-  {!isSidebarOpen &&(
- <button className="toggle-btn" onClick={showSidebar}>
-    <GoThreeBars/>
-  </button>
-  )}
-  
+  return (
+    <Wrapper>
+      <div className="nav-center">
+        <div className="nav-header">
+          <Link to="/">
+            <img
+              src={logo}
+              alt="atyeti"
+              style={{ marginTop: "-4rem", height: "65px", width: "170px" }}
+            ></img>
+          </Link>
 
-  </div>
- 
-<ul className="nav-links" >
- 
- {tempLinks.map((page,index) =>
- {
-   return <NavLink key={index} page={page}/>
- }
- )}  <li> <Link to="/wall" className="btn">Contact</Link></li>
-  <li><Link to="https://careers.smartrecruiters.com/AtyetiInc" className="btn">Career</Link></li>
-  <li> <Link to="/careers" className="btn">Case Studies</Link></li>
-  <li> <Link to="/partners" className="btn">partners</Link></li>
-    </ul>
+          {!isSidebarOpen && (
+            <button className="toggle-btn" onClick={showSidebar}>
+              <GoThreeBars />
+            </button>
+          )}
+        </div>
 
-  </div>
-
-
-  </Wrapper>
+        <ul className="nav-links">
+          {tempLinks.map((page, index) => {
+            return <NavLink key={index} page={page} />
+          })}{" "}
+          <li>
+            {" "}
+            <Link to="/connect" className="btn">
+              Contact
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="https://careers.smartrecruiters.com/AtyetiInc"
+              className="btn"
+            >
+              Career
+            </Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/casestudy" className="btn">
+              CaseStudies
+            </Link>
+          </li>
+          <li>
+            {" "}
+            <Link to="/partners" className="btn">
+              partners
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </Wrapper>
   )
 }
 
@@ -57,9 +78,9 @@ const Wrapper = styled.nav`
   display: flex;
   align-items: center;
   -webkit-box-align: center;
-  padding-top:0rem;
+  padding-top: 0rem;
   .nav-center {
-    padding-top:4rem;
+    padding-top: 4rem;
     width: 100vw;
     margin: 0 auto;
     max-width: var(--max-width);
@@ -68,7 +89,7 @@ const Wrapper = styled.nav`
     color: var(--clr-white);
     display: flex;
     align-items: center;
-    justify-content: space-evenly ;
+    justify-content: space-evenly;
     img {
       width: auto;
     }
@@ -110,14 +131,13 @@ const Wrapper = styled.nav`
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       max-width: 500px;
-      
     }
     li {
-      padding:0rem 2rem;
+      padding: 0rem 2rem;
       position: relative;
     }
     .btn {
-   color: var(--clr-white);
+      color: var(--clr-white);
       background: transparent;
       border: transparent;
       font-size: 1rem;
@@ -127,7 +147,7 @@ const Wrapper = styled.nav`
       width: 100%;
       text-transform: capitalize;
       position: relative;
-}
+    }
     button {
       color: var(--clr-white);
       background: transparent;

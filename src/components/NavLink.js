@@ -2,22 +2,27 @@ import React, { useContext } from "react"
 
 import styled from "styled-components"
 import { Link } from "gatsby"
-import {GatsbyContext} from '../context/context'
-const NavLink = ({page}) => {
-  const {links} =useContext(GatsbyContext);
-  return <Wrapper>
-    <button className="btn">{page}</button>
-    <div className="links">{links.map((link,index)=>{
-      const {url,label,icon} = link
-      if(link.page === page){
-        return(<Link to={url} key={index}>
-          {icon}
-          {label}
-        </Link>
-        )
-      }
-    })}</div>
-  </Wrapper>
+import { GatsbyContext } from "../context/context"
+const NavLink = ({ page }) => {
+  const { links } = useContext(GatsbyContext)
+  return (
+    <Wrapper>
+      <button className="btn">{page}</button>
+      <div className="links">
+        {links.map((link, index) => {
+          const { url, label, icon } = link
+          if (link.page === page) {
+            return (
+              <Link to={url} key={index}>
+                {icon}
+                {label}
+              </Link>
+            )
+          }
+        })}
+      </div>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.li`

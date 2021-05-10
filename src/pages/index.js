@@ -1,36 +1,32 @@
 import React from "react"
 import { graphql } from "gatsby"
-import {
-  Layout,
-  Hero,
-  About,
-  Projects,
-  Survey,
-  
-  GridProjects,
-} from "../components"
+import { Layout, Hero, Projects, Solution } from "../components"
 import SEO from "../components/seo"
+import Scroll from "../components/scroll"
 const HomePage = ({ data }) => {
-  const { 
+  const {
     allAirtable: { nodes: projects },
-} = data
+  } = data
   return (
     <>
-    <SEO title="Atyeti" />
-    <Layout>
-      <Hero projects={projects}/>
-      <About/>
-      <Projects projects={projects} title="services" />
-     
-    </Layout>
+      <SEO title="Atyeti" />
+      <Layout>
+        <Scroll showBelow={250} />
+        <Hero projects={projects} />
+        <Solution />
+        <Projects projects={projects} title="services" />
+      </Layout>
     </>
   )
 }
 
-
 export const query = graphql`
   {
-    allAirtable(filter: {table: {eq: "Projects"}}, limit: 3, sort: {fields: data___date, order: ASC}) {
+    allAirtable(
+      filter: { table: { eq: "Projects" } }
+      limit: 3
+      sort: { fields: data___date, order: ASC }
+    ) {
       nodes {
         id
         data {

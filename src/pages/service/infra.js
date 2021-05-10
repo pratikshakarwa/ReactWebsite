@@ -1,50 +1,45 @@
-import React from 'react'
-// import "./BankAndFinance.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Split, SplitTitle, SplitImg } from  '../solutions/split1'
+import React from "react"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Split, SplitTitle } from "../solutions/split1"
 import { Container } from "react-bootstrap"
-
-import Logo from "./infras.jpg"
-
+import Logo from "../../images/infras.jpg"
 const Infra = () => {
-    return (
-
-
-<>
- <Container> 
-            
-            <Split>
-            
-            <div>
-                <img src={Logo} alt="logo" style={{height: "400px"}} />
+  return (
+    <>
+      <Container>
+        <Split>
+          <div>
+            <img src={Logo} alt="logo" style={{ height: "400px" }} />
+          </div>
+          <div>
+            <SplitTitle>INFRASTRUCTURE SERVICE</SplitTitle>
+            <p>
+              {" "}
+              With emerging technologies like Big Data, Mobility and cloud,
+              expectations from IT are higher than ever. Our experts can help
+              you build and manage an IT infrastructure that equals the demands
+              of a changing business environment
+            </p>
+            <h3 style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
+              <strong> Key Service Areas</strong>
+            </h3>
+            <div
+              className="row slideanim slide"
+              style={{ paddingBottom: "3rem" }}
+            >
+              <div className="col-md-4">
+                <li> Data Center Services</li>
+                <li>Service Desk</li>
+                <li> Network Services</li>
+                <li>End User Services</li>
+                <li>Remote Infrastructure Management</li>
+              </div>
             </div>
-            <div>
-                <SplitTitle>CLOUD SERVICES</SplitTitle>                                         
-                <p>    With emerging technologies like Big Data, Mobility and cloud, expectations from IT are higher than ever.
-      Our experts can help you build and manage an IT infrastructure that equals the demands of a changing
-       business environment
-                                                   </p>
-                                                   
-                                                  <h4><strong> Key Service Areas</strong></h4>
-                                                  <div className="row slideanim slide" >
-                                                    <div className="col-md-4"  >
-                         <p className="p"> Data Center Services</p>
-<p className="p">Service Desk</p>
-<p className="p"> Network Services</p>
-<p className="p">End User Services</p>
-<p className="p">Remote Infrastructure Management</p>
-  </div>     
-                                                    </div>
-                                     
-            </div>
+          </div>
         </Split>
-         </Container>
-
-        
-     
-</>
-
-    )
+      </Container>
+    </>
+  )
 }
 
 export default Infra

@@ -1,58 +1,52 @@
-import React from 'react'
-import styled from "styled-components"
-import "./HealthAndLife.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Split, SplitTitle, SplitImg } from './split1'
+import React from "react"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Split, SplitTitle } from "./split1"
 import { Container } from "react-bootstrap"
 
-import Logo from "./media1.jpg"
+import Logo from "../../images/media1.jpg"
 
 const Media = () => {
-    return (
+  return (
+    <>
+      <Container>
+        <Split style={{ paddingBottom: "5rem" }}>
+          <div>
+            <img src={Logo} alt="logo" style={{ height: "400px" }} />
+          </div>
+          <div>
+            <SplitTitle>Media & Entertainment</SplitTitle>
 
+            <p>
+              {" "}
+              Internet of Things, digital convergence, and on-demand mobility
+              are creating new opportunities for media companies. To meet the
+              demands of a 24/7 connected world, you need a nimble partner with
+              their finger on the pulse of new technology. Let us become your
+              Innovation Lab, identifying the emerging technologies and
+              strategies you need to align product with demand, make intelligent
+              business decisions, and deliver new and engaging experiences to
+              your customers in their connected world.
+            </p>
 
-<>
- <Container> 
-            
-            <Split>
-            
-            <div>
-                <img src={Logo} alt="logo" style={{height: "400px"}} />
+            <h3 style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
+              <strong>Key Media & Entertainment Areas Supported</strong>
+            </h3>
+            <div className="row slideanim slide">
+              <div className="col-md-4">
+                <li>Digital Advertising Services</li>
+                <li>Digital Asset Management</li>
+                <li>Direct Marketing</li>
+                <li>Mobility</li>
+                <li>Reporting & Insights</li>
+                <li>SEO & Enterprise Search</li>
+                <li>User Experience </li>
+              </div>
             </div>
-            <div>
-                <SplitTitle>Media & Entertainment</SplitTitle>
-                                                     
-                <p> Internet of Things, digital convergence, and on-demand mobility are creating new opportunities
-        for media companies. To meet the demands of a 24/7 connected world, you need a nimble partner with
-         their finger on the pulse of new technology. Let us become your Innovation Lab, identifying the
-          emerging technologies and strategies you need to align product with demand, make intelligent business
-           decisions, and deliver new and engaging experiences to your customers in their connected world.
-</p>
-                                                   
-                                                  <h4><strong>Key Media & Entertainment Areas Supported</strong></h4>
-                                                  <div className="row slideanim slide" >
-                                                    <div className="col-md-4">
-                                                          <p>Digital Advertising Services</p>
-<p>Digital Asset Management
-</p>
-<p>Direct Marketing</p>
-<p>Mobility</p>
-<p>Reporting & Insights</p>
-<p>SEO & Enterprise Search</p>
-<p>User Experience </p>
-</div>
-                                                
-</div>
-            </div>
+          </div>
         </Split>
-         </Container>
-
-        
-        
-     
-</>
-
-    )
+      </Container>
+    </>
+  )
 }
 
 export default Media

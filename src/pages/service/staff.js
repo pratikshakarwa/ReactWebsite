@@ -1,50 +1,44 @@
-import React from 'react'
-// import "./BankAndFinance.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Split, SplitTitle, SplitImg } from  '../solutions/split1'
+import React from "react"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Split, SplitTitle } from "../solutions/split1"
 import { Container } from "react-bootstrap"
 
-import Logo from "./staff1.jpg"
+import Logo from "../../images/staff1.jpg"
 
 const Staff = () => {
-    return (
+  return (
+    <>
+      <Container>
+        <Split>
+          <div>
+            <img src={Logo} alt="logo" style={{ height: "400px" }} />
+          </div>
+          <div>
+            <SplitTitle>STAFFING SOLUTIONS</SplitTitle>
+            <p>
+              {" "}
+              Atyeti’s unmatched database of candidates with time tested
+              processes and technology assure our clients of quality hires each
+              time. From sourcing a single Contractor to facilitating multiple
+              hires, we have the capability to scale our recruiting efforts
+              depending upon our clients’ needs
+            </p>
 
-
-<>
- <Container> 
-            
-            <Split>
-            
-            <div>
-                <img src={Logo} alt="logo" style={{height: "400px"}} />
+            <h3 style={{ paddingBottom: "1rem", paddingTop: "1rem" }}>
+              <strong>Key Service Areas</strong>
+            </h3>
+            <div className="row slideanim slide">
+              <div className="col-md-4" style={{ paddingBottom: "3rem" }}>
+                <li> Contract Staff Augmentation</li>
+                <li>Contract to Hire</li>
+                <li> Permanent / Full Time</li>
+              </div>
             </div>
-            <div>
-                <SplitTitle>STAFFING SOLUTIONS</SplitTitle>                                         
-                <p>  Atyeti’s unmatched database of candidates with time tested processes and technology assure our clients of quality hires each time.
-
-From sourcing a single Contractor to facilitating multiple hires, we have the capability to scale our recruiting efforts depending upon our clients’ needs
-                       </p>
-                                                   
-                                                  <h4><strong>Key Service Areas</strong></h4>
-                                                  <div className="row slideanim slide" >
-                                                    <div className="col-md-4"  >
-<p className="p"> Contract Staff Augmentation</p>
-<p className="p">Contract to Hire</p>
-<p className="p">  Permanent / Full Time</p>
-
- </div>
-
-                                                    </div>
-                                     
-            </div>
+          </div>
         </Split>
-         </Container>
-
-        
-     
-</>
-
-    )
+      </Container>
+    </>
+  )
 }
 
 export default Staff

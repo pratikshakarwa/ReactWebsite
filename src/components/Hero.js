@@ -5,50 +5,50 @@ import { Link } from "gatsby"
 import { FiChevronLeft, FiChevronsRight } from "react-icons/fi"
 
 const Hero = ({ projects }) => {
-  const images = projects.map((item) =>{
-  const {data:{
-    image: { localFiles },
-  },
-} = item
-  const image = localFiles[0].childImageSharp.fluid
-  return image
+  const images = projects.map(item => {
+    const {
+      data: {
+        image: { localFiles },
+      },
+    } = item
+    const image = localFiles[0].childImageSharp.fluid
+    return image
   })
-const [index, setIndex] = React.useState(0)
+  const [index, setIndex] = React.useState(0)
 
   return (
-  <Wrapper>
-  <Background image={images[index]}>
-    <article>
-<h3>COVID-19</h3>
-<h1>We are in this to together</h1>
-<Link to="/">Learn More</Link>
-</article>
-<button className="prev-btn" onClick={() => setIndex(index-1)}>
-  <FiChevronLeft />
-</button>
-<button className="next-btn" onClick={() => setIndex(index+1)}>
-  <FiChevronsRight />
-</button>
+    <Wrapper>
+      <Background image={images[index]}>
+        <article>
+          <h3>COVID-19</h3>
+          <h1>We are in this to together</h1>
+          <Link to="/">Learn More</Link>
+        </article>
+        <button className="prev-btn" onClick={() => setIndex(index - 1)}>
+          <FiChevronLeft />
+        </button>
+        <button className="next-btn" onClick={() => setIndex(index + 1)}>
+          <FiChevronsRight />
+        </button>
 
-<div className="dots">
-  {
-    images.map((_,btnIndex) =>{
-return ( <span key={btnIndex}
-  onClick={()=> setIndex(btnIndex)}
-className={index === btnIndex ? "active" : undefined}>
-
-</span>
-     )
-      })}
-</div>
-  </Background>
-</Wrapper>
+        <div className="dots">
+          {images.map((_, btnIndex) => {
+            return (
+              <span
+                key={btnIndex}
+                onClick={() => setIndex(btnIndex)}
+                className={index === btnIndex ? "active" : undefined}
+              ></span>
+            )
+          })}
+        </div>
+      </Background>
+    </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
   article {
-    
     width: 85vw;
     max-width: 800px;
     color: var(--clr-white);

@@ -1,27 +1,21 @@
 import React from "react"
-import { graphql } from "gatsby"
-import {
-  Layout,
-  Hero,
-  About,
-  Projects,
-  Survey,
-
-  GridProjects,
-} from "../components"
+import { Layout } from "../components"
 import SEO from "../components/seo"
-import { Link } from "gatsby"
-
 import styled from "styled-components"
 import People from "../friends/Friend1"
+import Scroll from "../components/scroll"
 
 const Partners = () => {
   return (
-  <Wrapper>
-    <Layout>
-  <People />
-  </Layout>
-   </Wrapper>
+    <>
+      <SEO title="partners" />
+      <Wrapper>
+        <Scroll showBelow={250} />
+        <Layout>
+          <People />
+        </Layout>
+      </Wrapper>
+    </>
   )
 }
 const Wrapper = styled.main`
@@ -30,8 +24,6 @@ const Wrapper = styled.main`
   nav {
     background: var(--clr-grey-5);
   }
-
 `
-
 
 export default Partners

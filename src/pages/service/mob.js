@@ -1,52 +1,44 @@
-import React from 'react'
-// import "./BankAndFinance.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Split, SplitTitle, SplitImg } from  '../solutions/split1'
+import React from "react"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Split, SplitTitle } from "../solutions/split1"
 import { Container } from "react-bootstrap"
-
-import Logo from "./mobility1.jpg"
+import Logo from "../../images/mobility1.jpg"
 
 const Mob = () => {
-    return (
+  return (
+    <>
+      <Container>
+        <Split>
+          <div>
+            <img src={Logo} alt="logo" style={{ height: "400px" }} />
+          </div>
+          <div>
+            <SplitTitle>MOBILITY</SplitTitle>
+            <p>
+              {" "}
+              Mobility is redefining the rules of user experience with anytime,
+              anywhere availability and is now a necessity for future-ready,
+              borderless global enterprise. It is a constant endeavor to improve
+              employee interactivity and create seamless experiences for
+              customers while having real-time engagements with the field force.
+            </p>
 
-
-<>
- <Container> 
-            
-            <Split>
-            
-            <div>
-                <img src={Logo} alt="logo" style={{height: "400px"}} />
+            <h3 style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
+              <strong> Key Service Areas</strong>
+            </h3>
+            <div className="row slideanim slide">
+              <div className="col-md-4" style={{ paddingBottom: "3rem" }}>
+                <li> Strategy and Consulting</li>
+                <li> Delivery Services</li>
+                <li> Managed Services</li>
+                <li> Mobility Solutions</li>
+              </div>
             </div>
-            <div>
-                <SplitTitle>MOBILITY </SplitTitle>                                         
-                <p>    Mobility is redefining the rules of user experience with anytime, anywhere availability and is now
-     a necessity for future-ready, borderless global enterprise.
-      It is a constant endeavor to improve employee interactivity and create seamless experiences
-       for customers while having real-time engagements with the field force.
-
-                       </p>
-                                                   
-                                                  <h4><strong> Key Service Areas</strong></h4>
-                                                  <div className="row slideanim slide" >
-                                                    <div className="col-md-4"  >
-                         <p className="p"> Strategy and Consulting</p>
-<p className="p"> Delivery Services</p>
-<p className="p"> Managed Services</p>
-<p className="p"> Mobility Solutions</p>
-
-  </div>     
-                                                    </div>
-                                     
-            </div>
+          </div>
         </Split>
-         </Container>
-
-        
-     
-</>
-
-    )
+      </Container>
+    </>
+  )
 }
 
 export default Mob

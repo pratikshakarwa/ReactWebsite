@@ -1,26 +1,20 @@
 import React from "react"
-import { graphql } from "gatsby"
-import {
-  Layout,
-  Hero,
-  About,
-  Projects,
-  Survey,
-
-  GridProjects,
-} from "../components"
+import { Layout } from "../components"
 import SEO from "../components/seo"
-import { Link } from "gatsby"
 import Case from "../casestudies/case"
 import styled from "styled-components"
+import Scroll from "../components/scroll"
 const Career = () => {
   return (
-    <Wrapper>
-      <Layout>
-   <Case />
-   </Layout>
-   </Wrapper>
-   
+    <>
+      <SEO title="case study" />
+      <Wrapper>
+        <Scroll showBelow={250} />
+        <Layout>
+          <Case />
+        </Layout>
+      </Wrapper>
+    </>
   )
 }
 
@@ -30,7 +24,6 @@ const Wrapper = styled.main`
   nav {
     background: var(--clr-grey-5);
   }
-
 `
 
 export default Career
