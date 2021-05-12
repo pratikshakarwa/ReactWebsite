@@ -1,11 +1,11 @@
 import Logo1 from "../images/ceo1.jpg"
 import Logo2 from "../images/casey1.jpg"
-import Logo3 from "../images/blank1.jpg"
+import Logo3 from "../images/blank2.jpg"
 import { FaLinkedin } from "react-icons/fa"
 import React from "react"
 const Sadata = [
   {
-    imgsrc: Logo3,
+    imgsrc: Logo1,
     title: "CEO, Mr.Prashant Myadam",
     icon: <FaLinkedin className="icon" />,
     url: `/service/Application`,

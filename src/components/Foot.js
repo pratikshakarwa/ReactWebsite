@@ -35,7 +35,7 @@ const Wrapper = styled.section`
       margin-bottom: 1rem;
     }
     h4 {
-      color: white;
+      color: var(--clr-grey-7);
       text-transform: uppercase;
       font-weight: 500;
       display: block;
@@ -46,7 +46,7 @@ const Wrapper = styled.section`
       text-align: left;
     }
     p {
-      color: white;
+      color: var(--clr-grey-8);
       max-width: 34em;
       padding-top: -3rem;
       font-weight: 500;

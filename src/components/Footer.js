@@ -14,7 +14,7 @@ const Footer = () => {
             {" "}
             <li>
               {" "}
-              <Link to="/wall" className="btn">
+              <Link to="/connect" className="btn">
                 Contact
               </Link>
             </li>
